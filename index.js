@@ -55,6 +55,18 @@ function changeImg() {
     }
 }
 
+
+const jsConfetti = new JSConfetti();
+const canvas = document.getElementById('confetti');
+const yayAudio = new Audio('assets/yay.mp3')
+document.getElementById('yesBtn').addEventListener('click', () => {
+  jsConfetti.addConfetti({
+    emojis: ['🌸', '❤️', '💕','💗']
+  })
+  yayAudio.play();
+})
+
+
 function yesClicked() {
     imgChange = document.getElementById('img1');
     imgChange.src = "assets/bear55.png";
@@ -97,3 +109,6 @@ const animateMove = (element, prop, pixels) =>
 const getRandomNumber = (num) => {
   return Math.floor(Math.random() * (num + 1));
 };
+
+
+

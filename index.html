@@ -8,18 +8,23 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300&family=Protest+Riot&display=swap" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" integrity="sha512-aNMyYYxdIxIaot0Y1/PLuEu3eipGCmsEUBrUq+7aVyPGMFH8z0eTP0tkqAvv34fzN6z+201d3T8HPb1svWSKHQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <link rel="stylesheet" href="style.css" />
     </head>
 <body>
-    <div class="hero-img">
+    <div class="hero-img" id="confetti">
+        <!-- <audio controls loop> -->
+            <!-- <source src="assets/walkinparis.mp3" type="audio/mp3"> -->
+            <!-- <embed src="assets/walkinparis.mp3" autostart="true" loop="true" hidden="true">  -->
+          <!-- </audio> -->
         <div id="container">
             <img class="images" id="img1" alt="image here" src="assets/bear11.png"/>
         </div>
         <h1 id="header">Will you be my Valentines?</h1>
         <button class="btn" id="yesBtn" onclick="yesClicked()">Yes</button>
         <button class="btn" id="noBtn" onclick="buttonSwap()">No</button>
-        <button id="fastBtn" style="display: none" >No</button>
+        <button class='btn' id="fastBtn" style="display: none" >No</button>
     </div>
 
     <script src="index.js"></script>
