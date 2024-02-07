@@ -31,22 +31,22 @@
 // }
 
 
-var currentImage = 2;
-var totalImage = 4;
-var headerArray = ["Really...", "WHAT?! WHY NOT?!", "GUESS WHAT...it's inevitable!!!"]
+let currentImage = 2;
+let totalImage = 4;
+let headerArray = ["Really...", "WHAT?! WHY NOT?!", "GUESS WHAT...it's inevitable!!!"]
 
 function changeImg() {
-    var imgChange = document.getElementById('img1');
+    const imgChange = document.getElementById('img1');
     if (currentImage <= totalImage) {
-        imgChange.src = "/assets/bear" + currentImage + currentImage + ".png";
+        imgChange.src = "assets/bear" + currentImage + currentImage +".png";
 
-        var headerChange = document.getElementById('header');
-        var currentHeader = currentImage - 2;
+        const headerChange = document.getElementById('header');
+        let currentHeader = currentImage - 2;
 
         if (currentHeader < headerArray.length) {
             headerChange.innerHTML = headerArray[currentHeader]
         }
-        
+
         if (currentImage === totalImage) {
             document.getElementById('noBtn').style.display = "none";
             document.getElementById('fastBtn').style.display = "inline-block";
@@ -57,7 +57,7 @@ function changeImg() {
 
 function yesClicked() {
     imgChange = document.getElementById('img1');
-    imgChange.src = "/assets/bear55.png";
+    imgChange.src = "assets/bear55.png";
     var headerChange = document.getElementById('header');
     headerChange.innerHTML = "❤ YAY ❤ <br> Malibu Farm <br> Feb 14 @ 4:30PM <br> Appointment Booked!";
     headerChange.style.top = "50%";
